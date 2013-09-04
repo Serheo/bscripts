@@ -1,3 +1,4 @@
+source ~/.git-completion.bash
 
 alias nginx_start='launchctl load -w ~/Library/LaunchAgents/org.nginx.nginx.plist'
 alias nginx_stop='launchctl unload -w ~/Library/LaunchAgents/org.nginx.nginx.plist'
