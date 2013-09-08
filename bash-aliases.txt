@@ -36,6 +36,16 @@ alias rpry="pry -r ./config/environment"
 alias cdp="cd ~/Projects"
 
 slice() {
-	git add -A
-	git commit -m "Slice"
+  git add -A
+  git commit -m "Slice"
+}
+
+commit() {  
+  git add -A
+
+  if [ -n "$1" ]; then
+    git commit -m "$1"
+  else
+    git commit -m "Slice"
+  fi
 }
