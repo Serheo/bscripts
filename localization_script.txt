@@ -1,0 +1,17 @@
+from="${SRCROOT}/PROJECT_NAME/Resources/Locales"
+to="${SRCROOT}/PROJECT_NAME/Resources/Locales/LocaleReferences"
+
+ru_list=("az-Cyrl-AZ" "az-Cyrl" "az" "be-BY" "be" "hy-AM" "hy" "ka-GE" "ka" "kk-KZ" "kk" "lt-LT" "lt" "lv-LV" "lv" "ru" "uk" "uz-Cyrl-UZ" "uz-Cyrl" "uz")
+tLen=${#ru_list[@]}
+    
+for item in "${ru_list[@]}"
+do
+    cp -f "${from}/Ru/Localizable.strings" "${to}/${item}.lproj/Localizable.strings"
+    cp -f "${from}/Ru/InfoPlist.strings" "${to}/${item}.lproj/InfoPlist.strings"
+done
+    
+cp -f "${from}/En/Localizable.strings" "${to}/en.lproj/Localizable.strings"
+cp -f "${from}/En/InfoPlist.strings" "${to}/en.lproj/InfoPlist.strings"
+    
+cp -f "${from}/Ru/Localizable.strings" "${to}/ru.lproj/Localizable.strings"
+cp -f "${from}/Ru/InfoPlist.strings" "${to}/ru.lproj/InfoPlist.strings"
