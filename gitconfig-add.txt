@@ -13,5 +13,5 @@
     lol = log --graph --decorate --pretty=oneline --abbrev-commit
     lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
     ls = ls-files
-	track = update-index --no-assume-unchanged
-	untrack = update-index --assume-unchanged
+    track = update-index --no-assume-unchanged
+    untrack = update-index --assume-unchanged
