@@ -1,5 +1,9 @@
 source ~/.git-completion.bash
 
+export ANDROID_HOME=/Users/i/Android\ SDK # !!! Change this configuration path. I install Android SDK in my local Mac directory.
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+
 alias nginx_start='launchctl load -w ~/Library/LaunchAgents/org.nginx.nginx.plist'
 alias nginx_stop='launchctl unload -w ~/Library/LaunchAgents/org.nginx.nginx.plist'
 
