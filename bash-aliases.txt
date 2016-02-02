@@ -25,9 +25,9 @@ alias gaa="git add -A"
 alias gci="git commit"
 alias gcod="git checkout develop"
 alias gcom="git checkout master"
-alias gpm="git push origin master --recurse-submodules=on-demand"
+alias gpm="git push origin master"
 alias gpom="git pull origin master"
-alias gpd="git push origin develop --recurse-submodules=on-demand"
+alias gpd="git push origin develop"
 alias gbr="git branch"
 alias gpod="git pull origin develop"
 alias gm="git merge --no-ff"
@@ -44,28 +44,16 @@ alias rpry="pry -r ./config/environment"
 alias cdp="cd ~/Projects"
 
 slice() {
-  git submodule foreach "git add ."
-  git submodule foreach "git commit -m 'Slice'"
-
   git add -A
   git commit -m "Slice"
-
-  git submodule foreach "git add ."
-  git submodule foreach "git commit -m 'Slice'"
 }
 
 commit() {  
-  if [ -n "$1" ]; then
-    git submodule foreach "git add ."
-    git submodule foreach "git commit -m ""$1"  
+  git add -A
 
-    git add -A
+  if [ -n "$1" ]; then
     git commit -m "$1"
   else
-    git submodule foreach "git add ."
-    git submodule foreach "git commit -m 'Slice'"
-
-    git add -A
     git commit -m "Slice"
   fi
 }
