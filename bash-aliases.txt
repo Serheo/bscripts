@@ -1,25 +1,16 @@
-source ~/.git-completion.bash
 
-export ANDROID_HOME=/Users/i/Android\ SDK # !!! Change this configuration path. I install Android SDK in my local Mac directory.
+
+export ANDROID_HOME=/Users/willy/Library/Android/sdk # !!! Change this configuration path. I install Android SDK in my local Mac directory.
 export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 
-alias nginx_start='launchctl load -w ~/Library/LaunchAgents/org.nginx.nginx.plist'
-alias nginx_stop='launchctl unload -w ~/Library/LaunchAgents/org.nginx.nginx.plist'
-
 export CLICOLOR=1
 export LSCOLORS=GxFxCxDxBxegedabagaced
-export RUBYOPT=-Ku
 
-alias b="bundle"
-alias bi="b install --path vendor"
-alias bil="bi --local"
-alias bu="b update"
-alias be="b exec"
-alias beu="b exec uniqfrd"
-alias binit="bi && b package && echo 'vendor/ruby' >> .gitignore"
-alias ber="b exec rake"
-alias create-repo="touch .gitignore && git add .gitignore && git commit -m 'Created repo' && git checkout -b develop"
+alias d="docker"
+alias dm="docker-machine"
+alias dc="docker-compose"
+
 alias g="git"
 alias gaa="git add -A"
 alias gci="git commit"
@@ -35,12 +26,9 @@ alias gg="gitk --all &"
 alias gst="g st -sb"
 alias gbr="g branch"
 alias l="ls -lahG"
-alias m="mate ."
-alias p="ping"
 alias py="ping -c 4 ya.ru"
 alias pwc="pwd | pbcopy"
 alias r="rake"
-alias rpry="pry -r ./config/environment"
 alias cdp="cd ~/Projects"
 
 slice() {
@@ -57,3 +45,5 @@ commit() {
     git commit -m "Slice"
   fi
 }
+
+eval "$(docker-machine env default)"
