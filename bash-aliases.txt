@@ -29,7 +29,11 @@ alias l="ls -lahG"
 alias py="ping -c 4 ya.ru"
 alias pwc="pwd | pbcopy"
 alias r="rake"
+alias py="python"
 alias cdp="cd ~/Projects"
+alias gpr="git remote prune origin"
+alias fl="bundle exec fastlane"
+alias rn="react-native"
 
 slice() {
   git add -A
